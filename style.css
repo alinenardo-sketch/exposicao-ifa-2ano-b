@@ -1,21 +1,589 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #0a0f1c;
-    color: white;
-    text-align: center;
+/* ========================================
+   CONFIGURAÇÕES GERAIS
+======================================== */
+
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-h1 {
-    font-size: 60px;
-    margin-top: 150px;
+html {
+    scroll-behavior: smooth;
 }
 
-h2 {
-    font-size: 35px;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #05070d;
+    color: #ffffff;
+    overflow-x: hidden;
 }
 
-p {
-    font-size: 20px;
+
+/* ========================================
+   MENU
+======================================== */
+
+header {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    padding: 24px 6%;
+
+    background: rgba(5, 7, 13, 0.75);
+
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(0, 200, 255, 0.15);
+
+    z-index: 1000;
+}
+
+nav {
+    max-width: 1300px;
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.logo {
+    font-size: 30px;
+
+    font-weight: 900;
+
+    letter-spacing: 3px;
+
+    color: #ffffff;
+}
+
+.logo span {
+    color: #00e5ff;
+}
+
+nav ul {
+    display: flex;
+
+    gap: 35px;
+
+    list-style: none;
+}
+
+nav a {
+    color: #cbd5e1;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00e5ff;
+
+    text-shadow:
+        0 0 10px #00e5ff;
+}
+
+
+/* ========================================
+   CAPA
+======================================== */
+
+.hero {
+    min-height: 100vh;
+
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(0, 100, 180, 0.15),
+            transparent 45%
+        ),
+
+        #05070d;
+}
+
+.hero-content {
+    position: relative;
+
+    z-index: 10;
+
+    max-width: 900px;
+
+    padding: 30px;
+}
+
+
+/* ========================================
+   STATUS
+======================================== */
+
+.status {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 10px 18px;
+
+    border: 1px solid rgba(0, 229, 255, 0.3);
+
+    border-radius: 30px;
+
+    color: #8beeff;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    background: rgba(0, 229, 255, 0.05);
+}
+
+.status-dot {
+    width: 8px;
+
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: #00e5ff;
+
+    box-shadow:
+        0 0 10px #00e5ff,
+        0 0 20px #00e5ff;
+}
+
+
+/* ========================================
+   TÍTULO
+======================================== */
+
+.eyebrow {
+    margin-top: 45px;
+
+    color: #00e5ff;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    letter-spacing: 8px;
+}
+
+.hero h1 {
+    margin-top: 12px;
+
+    font-size: clamp(60px, 10vw, 130px);
+
+    line-height: 0.95;
+
+    font-weight: 900;
+
+    letter-spacing: -5px;
+
+    color: #ffffff;
+
+    text-shadow:
+        0 0 30px rgba(0, 229, 255, 0.15);
+}
+
+.hero h1 strong {
+    display: block;
+
+    color: #00e5ff;
+
+    text-shadow:
+        0 0 10px rgba(0, 229, 255, 0.8),
+        0 0 30px rgba(0, 229, 255, 0.5),
+        0 0 60px rgba(0, 229, 255, 0.3);
+}
+
+.line {
+    width: 120px;
+
+    height: 2px;
+
+    margin: 35px auto;
+
+    background: #00e5ff;
+
+    box-shadow:
+        0 0 10px #00e5ff,
+        0 0 25px #00e5ff;
+}
+
+.hero h2 {
+    font-size: 24px;
+
+    letter-spacing: 7px;
+
+    color: #e2e8f0;
+}
+
+.hero h2 span {
+    color: #00e5ff;
+}
+
+.description {
+    max-width: 600px;
+
+    margin: 25px auto 0;
+
+    color: #94a3b8;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   BOTÃO
+======================================== */
+
+.hero-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-top: 40px;
+
+    padding: 17px 28px;
+
+    border: 1px solid #00e5ff;
+
+    color: #00e5ff;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    background: rgba(0, 229, 255, 0.05);
+
+    transition: 0.3s;
+}
+
+.hero-button span {
+    font-size: 22px;
+}
+
+.hero-button:hover {
+    background: #00e5ff;
+
+    color: #05070d;
+
+    box-shadow:
+        0 0 15px #00e5ff,
+        0 0 40px rgba(0, 229, 255, 0.4);
+}
+
+
+/* ========================================
+   CIRCUITOS DECORATIVOS
+======================================== */
+
+.circuit {
+    position: absolute;
+
+    height: 1px;
+
+    background: rgba(0, 229, 255, 0.25);
+
+    box-shadow:
+        0 0 8px rgba(0, 229, 255, 0.4);
+}
+
+.circuit::after {
+    content: "";
+
+    position: absolute;
+
+    width: 7px;
+
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #00e5ff;
+
+    box-shadow:
+        0 0 10px #00e5ff;
+
+    top: -3px;
+}
+
+.circuit-1 {
+    width: 260px;
+
+    top: 30%;
+
+    left: 0;
+}
+
+.circuit-1::after {
+    right: 0;
+}
+
+.circuit-2 {
+    width: 220px;
+
+    bottom: 30%;
+
+    right: 0;
+}
+
+.circuit-2::after {
+    left: 0;
+}
+
+.circuit-3 {
+    width: 150px;
+
+    top: 20%;
+
+    right: 12%;
+}
+
+.circuit-3::after {
+    left: 0;
+}
+
+
+/* ========================================
+   ROBÔ DECORATIVO
+======================================== */
+
+.robot {
+    position: absolute;
+
+    right: 8%;
+
+    bottom: 18%;
+
+    opacity: 0.15;
+
+    transform: scale(1.4);
+}
+
+.robot-head {
+    width: 70px;
+
+    height: 55px;
+
+    border: 2px solid #00e5ff;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 15px;
+
+    box-shadow:
+        0 0 20px rgba(0, 229, 255, 0.4);
+}
+
+.robot-eye {
+    width: 8px;
+
+    height: 8px;
+
+    background: #00e5ff;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 10px #00e5ff;
+}
+
+.robot-body {
+    width: 90px;
+
+    height: 100px;
+
+    margin: 10px auto 0;
+
+    border: 2px solid #00e5ff;
+
+    border-radius: 15px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+.robot-core {
+    width: 25px;
+
+    height: 25px;
+
+    border: 2px solid #00e5ff;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 20px #00e5ff;
+}
+
+
+/* ========================================
+   SCROLL
+======================================== */
+
+.scroll {
+    position: absolute;
+
+    bottom: 25px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    color: #64748b;
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+}
+
+.scroll span {
+    display: block;
+
+    width: 1px;
+
+    height: 35px;
+
+    margin: 0 auto 10px;
+
+    background: #00e5ff;
+}
+
+
+/* ========================================
+   SEÇÕES
+======================================== */
+
+.section {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 130px 6%;
+}
+
+.section-label {
+    color: #00e5ff;
+
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 20px;
+}
+
+.section h2 {
+    font-size: 45px;
+
+    margin-bottom: 25px;
+}
+
+.section p {
+    max-width: 750px;
+
+    color: #94a3b8;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+}
+
+
+/* ========================================
+   RODAPÉ
+======================================== */
+
+footer {
+    padding: 60px 20px;
+
+    text-align: center;
+
+    border-top: 1px solid rgba(0, 229, 255, 0.15);
+
+    background: #03050a;
+}
+
+footer p {
+    margin-top: 10px;
+
+    color: #64748b;
+}
+
+
+/* ========================================
+   CELULAR
+======================================== */
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 18px 20px;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .hero h2 {
+        font-size: 16px;
+
+        letter-spacing: 3px;
+    }
+
+    .robot {
+        display: none;
+    }
+
+    .section h2 {
+        font-size: 35px;
+    }
+
 }
