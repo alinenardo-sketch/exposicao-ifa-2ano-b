@@ -364,3 +364,42 @@ footer p {
     }
 
 }
+/* ========================================
+   SOBRE O PROJETO
+======================================== */
+
+#sobre {
+    position: relative;
+}
+
+#sobre h2 {
+    max-width: 900px;
+    line-height: 1.1;
+}
+
+#sobre h2 span {
+    color: #00e5ff;
+
+    display: block;
+
+    text-shadow:
+        0 0 10px rgba(0, 229, 255, 0.4);
+}
+
+.sobre-conteudo {
+    max-width: 850px;
+
+    margin-top: 45px;
+
+    padding-left: 30px;
+
+    border-left: 2px solid #00e5ff;
+}
+
+.sobre-conteudo p {
+    margin-bottom: 25px;
+}
+
+.sobre-conteudo strong {
+    color: #ffffff;
+}
