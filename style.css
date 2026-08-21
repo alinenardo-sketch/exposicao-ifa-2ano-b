@@ -403,3 +403,28 @@ footer p {
 .sobre-conteudo strong {
     color: #ffffff;
 }
+/* ========================================
+   IDENTIFICAÇÃO DA INSTITUIÇÃO
+======================================== */
+
+.instituicao {
+    margin-top: 35px;
+
+    color: #ffffff;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+}
+
+.cidade {
+    margin-top: 8px;
+
+    color: #64748b;
+
+    font-size: 13px;
+
+    letter-spacing: 3px;
+}
