@@ -672,3 +672,30 @@ footer p {
 
     line-height: 1.8;
 }
+/* ========================================
+   IMAGENS DOS PROJETOS
+======================================== */
+
+.projeto-imagem {
+    height: 230px;
+
+    overflow: hidden;
+
+    padding: 0;
+}
+
+.projeto-imagem img {
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+.projeto-card:hover .projeto-imagem img {
+    transform: scale(1.05);
+}
