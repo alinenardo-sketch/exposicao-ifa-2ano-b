@@ -650,3 +650,25 @@ footer p {
     }
 
 }
+/* ========================================
+   TÍTULO DOS PROJETOS
+======================================== */
+
+#projetos h2 span {
+    display: block;
+
+    color: #00e5ff;
+
+    text-shadow:
+        0 0 10px rgba(0, 229, 255, 0.4);
+}
+
+.projetos-introducao {
+    max-width: 850px;
+
+    margin-top: 25px;
+
+    color: #94a3b8;
+
+    line-height: 1.8;
+}
