@@ -1250,3 +1250,103 @@ footer p {
     }
 
 }
+/* =========================================================
+   VÍDEOS E MATERIAIS DOS PROJETOS
+========================================================= */
+
+.material-video {
+    width: 100%;
+    max-width: 900px;
+    margin: 40px 0;
+
+    padding: 10px;
+
+    background: #071018;
+
+    border: 1px solid rgba(0, 229, 255, 0.25);
+
+    box-shadow:
+        0 0 30px rgba(0, 229, 255, 0.06);
+}
+
+.material-video video {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    min-height: 350px;
+
+    background: #000;
+
+    object-fit: contain;
+}
+
+.material-documento {
+    width: 100%;
+    max-width: 900px;
+
+    margin: 40px 0;
+
+    background: #071018;
+
+    border: 1px solid rgba(0, 229, 255, 0.25);
+
+    overflow: hidden;
+}
+
+.material-documento iframe {
+    display: block;
+
+    width: 100%;
+    height: 700px;
+
+    border: none;
+
+    background: #ffffff;
+}
+
+.material-button {
+    display: inline-block;
+
+    margin-top: 5px;
+    padding: 14px 22px;
+
+    color: #03070b;
+    background: #00e5ff;
+
+    text-decoration: none;
+
+    font-size: 10px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    transition: 0.3s;
+}
+
+.material-button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 0 20px rgba(0, 229, 255, 0.4);
+}
+
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+    .material-video {
+        padding: 5px;
+    }
+
+    .material-video video {
+        min-height: 220px;
+    }
+
+    .material-documento iframe {
+        height: 500px;
+    }
+
+}
