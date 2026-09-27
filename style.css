@@ -3,7 +3,7 @@
 ========================================================= */
 
 * {
-    margin: 4;
+    margin: 10;
     padding: 0;
     box-sizing: border-box;
 }
@@ -85,34 +85,34 @@ body::before {
 .logo {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
 }
 
 .logo span {
     color: #00e5ff;
-    font-size: 26px;
-    font-weight: 900;
-    letter-spacing: 4px;
+    font-size: 56px;
+    font-weight: 1000;
+    letter-spacing: 6px;
 }
 
 .logo small {
     color: #8191a5;
-    font-size: 9px;
-    letter-spacing: 2px;
+    font-size: 11px;
+    letter-spacing: 5px;
 }
 
 .navbar nav {
     display: flex;
-    gap: 30px;
+    gap: 60px;
 }
 
 .navbar nav a {
     color: #94a3b8;
     text-decoration: none;
 
-    font-size: 10px;
+    font-size: 13px;
     font-weight: bold;
-    letter-spacing: 2px;
+    letter-spacing: 4px;
 
     transition: 0.3s;
 }
@@ -129,7 +129,7 @@ body::before {
 .hero {
     min-height: 100vh;
 
-    padding: 150px 8% 100px;
+    padding: 200px 8% 100px;
 
     position: relative;
     overflow: hidden;
