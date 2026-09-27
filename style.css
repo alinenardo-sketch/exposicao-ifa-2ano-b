@@ -1773,3 +1773,31 @@ section h2 span {
     }
 
 }
+/* =========================================================
+   SÍMBOLO FUTURISTA DA CAPA
+========================================================= */
+
+.robot {
+    transform: scale(1.7);
+    transform-origin: center;
+    filter:
+        drop-shadow(0 0 12px rgba(0, 229, 255, 0.7))
+        drop-shadow(0 0 35px rgba(0, 229, 255, 0.35));
+}
+
+/* brilho extra do núcleo */
+.robot-core {
+    box-shadow:
+        0 0 15px #00e5ff,
+        0 0 35px #00e5ff,
+        0 0 70px rgba(0, 229, 255, 0.6);
+}
+
+/* no celular, um pouco menor */
+@media (max-width: 700px) {
+
+    .robot {
+        transform: scale(1.25);
+    }
+
+}
