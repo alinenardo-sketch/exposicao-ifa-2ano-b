@@ -1370,352 +1370,42 @@ footer p {
     border: none;
     background: #ffffff;
 }
-
 /* =========================================================
-   CAPA — PROJETO IFA
-   VISUAL FUTURISTA CENTRALIZADO
-========================================================= */
-
-#inicio.hero {
-    min-height: 100vh;
-    padding: 110px 30px 80px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    position: relative;
-    overflow: hidden;
-
-    text-align: center;
-
-    background:
-        radial-gradient(
-            circle at center,
-            rgba(0, 229, 255, 0.07),
-            transparent 38%
-        ),
-        #03070b;
-}
-
-/* GRID TECNOLÓGICO DA CAPA */
-#inicio.hero::before {
-    content: "";
-
-    position: absolute;
-    inset: 0;
-
-    pointer-events: none;
-
-    background-image:
-        linear-gradient(
-            rgba(0, 229, 255, 0.035) 1px,
-            transparent 1px
-        ),
-        linear-gradient(
-            90deg,
-            rgba(0, 229, 255, 0.035) 1px,
-            transparent 1px
-        );
-
-    background-size: 50px 50px;
-
-    mask-image:
-        radial-gradient(
-            ellipse at center,
-            black 0%,
-            transparent 75%
-        );
-}
-
-/* HALO DE LUZ ATRÁS DO TÍTULO */
-#inicio.hero::after {
-    content: "";
-
-    position: absolute;
-
-    width: 650px;
-    height: 650px;
-
-    left: 50%;
-    top: 50%;
-
-    transform: translate(-50%, -50%);
-
-    background:
-        radial-gradient(
-            circle,
-            rgba(0, 229, 255, 0.10),
-            rgba(0, 229, 255, 0.025) 35%,
-            transparent 70%
-        );
-
-    pointer-events: none;
-    z-index: 0;
-}
-
-/* CONTEÚDO CENTRAL */
-#inicio .hero-content {
-    width: 100%;
-    max-width: 1000px;
-
-    margin: 0 auto;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    position: relative;
-    z-index: 5;
-}
-
-/* ETIQUETA SUPERIOR */
-#inicio .hero-label {
-    margin-bottom: 18px;
-
-    color: #00e5ff;
-
-    font-size: 11px;
-    font-weight: bold;
-    letter-spacing: 5px;
-
-    text-shadow:
-        0 0 10px rgba(0, 229, 255, 0.6);
-}
-
-/* ESCOLA */
-#inicio .hero-school {
-    margin-bottom: 28px;
-
-    color: #8191a5;
-
-    font-size: 10px;
-    line-height: 1.8;
-    letter-spacing: 3px;
-
-    text-align: center;
-}
-
-/* TÍTULO PRINCIPAL */
-#inicio .hero h1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    margin: 0;
-
-    font-size: clamp(64px, 10vw, 125px);
-    line-height: 0.85;
-    letter-spacing: -5px;
-
-    color: #ffffff;
-
-    text-align: center;
-
-    text-shadow:
-        0 0 10px rgba(255, 255, 255, 0.25),
-        0 0 30px rgba(0, 229, 255, 0.15);
-}
-
-/* 2º ANO B — MENOR */
-#inicio .hero h1 span {
-    order: 1;
-
-    display: block;
-
-    margin: 0 0 16px;
-
-    font-size: clamp(30px, 4vw, 48px);
-    line-height: 1;
-
-    letter-spacing: 2px;
-
-    color: #00e5ff;
-
-    text-shadow:
-        0 0 8px #00e5ff,
-        0 0 20px rgba(0, 229, 255, 0.7),
-        0 0 45px rgba(0, 229, 255, 0.35);
-}
-
-/* PROJETO IFA — PROTAGONISTA */
-#inicio .hero h1 strong {
-    order: 2;
-
-    display: block;
-
-    margin: 0;
-
-    font-size: clamp(58px, 9vw, 115px);
-    line-height: 0.9;
-
-    font-weight: 900;
-    letter-spacing: -4px;
-
-    color: #ffffff;
-
-    text-shadow:
-        0 0 5px #ffffff,
-        0 0 15px rgba(0, 229, 255, 0.9),
-        0 0 35px rgba(0, 229, 255, 0.7),
-        0 0 70px rgba(0, 229, 255, 0.35);
-}
-
-/* LINHA LUMINOSA */
-#inicio .hero-line {
-    width: 140px;
-    height: 2px;
-
-    margin: 30px auto 25px;
-
-    background: #00e5ff;
-
-    box-shadow:
-        0 0 8px #00e5ff,
-        0 0 25px rgba(0, 229, 255, 0.7),
-        0 0 50px rgba(0, 229, 255, 0.35);
-}
-
-/* PROGRAMAÇÃO & ROBÓTICA */
-#inicio .hero h2 {
-    margin: 0;
-
-    font-size: clamp(18px, 2.5vw, 30px);
-    line-height: 1;
-
-    letter-spacing: 7px;
-    font-weight: 800;
-
-    color: #ffffff;
-
-    text-align: center;
-
-    text-shadow:
-        0 0 12px rgba(0, 229, 255, 0.25);
-}
-
-#inicio .hero h2 span {
-    color: #00e5ff;
-
-    text-shadow:
-        0 0 12px #00e5ff,
-        0 0 30px rgba(0, 229, 255, 0.45);
-}
-
-/* DESCRIÇÃO */
-#inicio .hero-description {
-    max-width: 680px;
-
-    margin: 28px auto 0;
-
-    color: #94a3b8;
-
-    font-size: 15px;
-    line-height: 1.8;
-
-    text-align: center;
-}
-
-/* BOTÃO */
-#inicio .hero-button {
-    margin-top: 32px;
-
-    padding: 16px 28px;
-
-    color: #03070b;
-    background: #00e5ff;
-
-    box-shadow:
-        0 0 12px rgba(0, 229, 255, 0.45),
-        0 0 35px rgba(0, 229, 255, 0.15);
-
-    transition: 0.3s;
-}
-
-#inicio .hero-button:hover {
-    transform: translateY(-4px);
-
-    box-shadow:
-        0 0 20px rgba(0, 229, 255, 0.8),
-        0 0 50px rgba(0, 229, 255, 0.3);
-}
-
-/* ELEMENTO ÓPTICO AO FUNDO */
-#inicio .hero-decoration {
-    position: absolute;
-
-    width: 520px;
-    height: 520px;
-
-    right: -70px;
-    top: 50%;
-
-    transform: translateY(-50%);
-
-    opacity: 0.18;
-
-    z-index: 1;
-    pointer-events: none;
-
-    filter:
-        drop-shadow(0 0 15px rgba(0, 229, 255, 0.5));
-}
-
-/* NÚCLEO LUMINOSO */
-#inicio .light-core {
-    width: 90px;
-    height: 90px;
-
-    background: #00e5ff;
-
-    box-shadow:
-        0 0 20px #00e5ff,
-        0 0 60px rgba(0, 229, 255, 0.8),
-        0 0 120px rgba(0, 229, 255, 0.35);
-}
-
-/* RESPONSIVO */
-@media (max-width: 900px) {
-
-    #inicio .hero-decoration {
-        right: -160px;
-        opacity: 0.10;
-    }
-
-}
-/* =========================================================
-   CAPA — EXPOSIÇÃO IFA | VISUAL FUTURISTA
+   CAPA PRINCIPAL — EXPOSIÇÃO IFA
+   VISUAL FUTURISTA / ÓPTICA / TECNOLOGIA
    ========================================================= */
 
 #inicio.hero {
     min-height: 100vh;
     height: 100vh;
     padding: 90px 30px 70px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     position: relative;
     overflow: hidden;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
     background:
-        radial-gradient(circle at 50% 46%,
-            rgba(0, 229, 255, 0.12) 0%,
-            rgba(0, 229, 255, 0.04) 20%,
-            transparent 48%),
-        linear-gradient(180deg,
-            #02070b 0%,
-            #010509 55%,
-            #02070b 100%);
+        radial-gradient(circle at 50% 48%,
+            rgba(0, 229, 255, 0.16) 0%,
+            rgba(0, 229, 255, 0.06) 22%,
+            transparent 52%),
+        radial-gradient(circle at 50% 100%,
+            rgba(0, 229, 255, 0.07),
+            transparent 42%),
+        linear-gradient(180deg, #02070b 0%, #010407 55%, #02070b 100%);
 }
 
-/* grade tecnológica */
+/* grade futurista */
 #inicio.hero::before {
     content: "";
     position: absolute;
     inset: 0;
     pointer-events: none;
-    opacity: 0.28;
+    opacity: 0.42;
 
     background-image:
         linear-gradient(rgba(0, 229, 255, 0.045) 1px, transparent 1px),
@@ -1723,44 +1413,44 @@ footer p {
 
     background-size: 55px 55px;
 
-    mask-image: linear-gradient(
-        to bottom,
-        transparent 0%,
-        black 18%,
-        black 82%,
-        transparent 100%
-    );
+    mask-image:
+        radial-gradient(ellipse at center, black 0%, transparent 78%);
 }
 
-/* brilho central */
+/* grande aura óptica central */
 #inicio.hero::after {
     content: "";
     position: absolute;
-    width: 650px;
-    height: 650px;
-    border-radius: 50%;
+    width: 760px;
+    height: 760px;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
 
-    background: radial-gradient(
-        circle,
-        rgba(0, 229, 255, 0.10) 0%,
-        rgba(0, 229, 255, 0.035) 28%,
-        transparent 68%
-    );
+    border-radius: 50%;
 
-    filter: blur(10px);
+    background:
+        radial-gradient(circle,
+            rgba(0, 229, 255, 0.13) 0%,
+            rgba(0, 229, 255, 0.045) 28%,
+            transparent 67%);
+
+    filter: blur(8px);
     pointer-events: none;
+    z-index: 0;
 }
 
-/* conteúdo */
+/* =========================================================
+   CONTEÚDO
+   ========================================================= */
+
 #inicio .hero-content {
     position: relative;
     z-index: 5;
+
     width: 100%;
-    max-width: 1100px;
-    text-align: center;
+    max-width: 1250px;
+    margin: 0 auto;
 
     display: flex;
     flex-direction: column;
@@ -1768,9 +1458,60 @@ footer p {
     justify-content: center;
 }
 
-/* pequeno título superior */
+/* moldura HUD / circuitos laterais */
+#inicio .hero-content::before,
+#inicio .hero-content::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 145px;
+    height: 230px;
+    transform: translateY(-50%);
+
+    opacity: 0.55;
+    pointer-events: none;
+
+    background:
+        linear-gradient(#00e5ff, #00e5ff) left top / 42px 1px no-repeat,
+        linear-gradient(#00e5ff, #00e5ff) left top / 1px 42px no-repeat,
+        linear-gradient(#00e5ff, #00e5ff) right bottom / 42px 1px no-repeat,
+        linear-gradient(#00e5ff, #00e5ff) right bottom / 1px 42px no-repeat;
+
+    border-top: 1px solid rgba(0, 229, 255, 0.18);
+    border-bottom: 1px solid rgba(0, 229, 255, 0.18);
+
+    box-shadow:
+        inset 0 0 25px rgba(0, 229, 255, 0.025),
+        0 0 20px rgba(0, 229, 255, 0.04);
+}
+
+#inicio .hero-content::before {
+    left: 0;
+
+    background:
+        linear-gradient(#00e5ff, #00e5ff) left top / 42px 1px no-repeat,
+        linear-gradient(#00e5ff, #00e5ff) left top / 1px 42px no-repeat,
+        linear-gradient(#00e5ff, #00e5ff) right bottom / 42px 1px no-repeat,
+        linear-gradient(#00e5ff, #00e5ff) right bottom / 1px 42px no-repeat,
+        linear-gradient(90deg, rgba(0,229,255,.8), rgba(0,229,255,.05)) 0 72px / 90px 1px no-repeat,
+        linear-gradient(90deg, rgba(0,229,255,.5), rgba(0,229,255,.02)) 0 88px / 55px 1px no-repeat;
+}
+
+#inicio .hero-content::after {
+    right: 0;
+
+    background:
+        linear-gradient(#00e5ff, #00e5ff) right top / 42px 1px no-repeat,
+        linear-gradient(#00e5ff, #00e5ff) right top / 1px 42px no-repeat,
+        linear-gradient(#00e5ff, #00e5ff) left bottom / 42px 1px no-repeat,
+        linear-gradient(#00e5ff, #00e5ff) left bottom / 1px 42px no-repeat,
+        linear-gradient(90deg, rgba(0,229,255,.05), rgba(0,229,255,.8)) 55px 72px / 90px 1px no-repeat,
+        linear-gradient(90deg, rgba(0,229,255,.02), rgba(0,229,255,.5)) 90px 88px / 55px 1px no-repeat;
+}
+
+/* etiqueta superior */
 #inicio .hero-label {
-    margin-bottom: 18px;
+    margin-bottom: 14px;
 
     color: #00e5ff;
     font-size: 12px;
@@ -1779,22 +1520,26 @@ footer p {
     text-transform: uppercase;
 
     text-shadow:
-        0 0 8px rgba(0, 229, 255, 0.8),
-        0 0 22px rgba(0, 229, 255, 0.35);
+        0 0 8px #00e5ff,
+        0 0 22px rgba(0, 229, 255, 0.45);
 }
 
 /* escola */
 #inicio .hero-school {
     margin-bottom: 30px;
 
-    color: rgba(220, 245, 255, 0.55);
+    color: rgba(220, 245, 255, 0.58);
     font-size: 10px;
     font-weight: 600;
     letter-spacing: 3px;
     text-transform: uppercase;
+    text-align: center;
 }
 
-/* TÍTULO PRINCIPAL */
+/* =========================================================
+   TÍTULO — 2º ANO B + EXPOSIÇÃO IFA
+   ========================================================= */
+
 #inicio .hero h1 {
     margin: 0;
     padding: 0;
@@ -1803,70 +1548,70 @@ footer p {
     flex-direction: column;
     align-items: center;
 
-    line-height: 0.9;
+    line-height: 0.86;
     text-align: center;
 }
 
 /* 2º ANO B — menor */
 #inicio .hero h1 span {
     display: block;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
 
-    font-size: clamp(42px, 5.5vw, 72px);
+    font-size: clamp(48px, 6vw, 86px);
     font-weight: 800;
     letter-spacing: 4px;
 
     color: #00e5ff;
 
     text-shadow:
-        0 0 8px rgba(0, 229, 255, 0.9),
-        0 0 25px rgba(0, 229, 255, 0.65),
-        0 0 55px rgba(0, 229, 255, 0.30);
+        0 0 7px #00e5ff,
+        0 0 20px rgba(0, 229, 255, 0.9),
+        0 0 45px rgba(0, 229, 255, 0.4);
 }
 
-/* EXPOSIÇÃO IFA — PROTAGONISTA */
+/* EXPOSIÇÃO IFA — grande protagonista */
 #inicio .hero h1 strong {
     display: block;
 
-    font-size: clamp(58px, 9vw, 125px);
+    font-size: clamp(82px, 13.5vw, 185px);
     font-weight: 950;
-    letter-spacing: -2px;
-    line-height: 0.88;
+    letter-spacing: -5px;
+    line-height: 0.86;
 
     color: #ffffff;
 
     text-shadow:
-        0 0 5px #ffffff,
-        0 0 14px rgba(0, 229, 255, 0.95),
-        0 0 35px rgba(0, 229, 255, 0.75),
-        0 0 75px rgba(0, 229, 255, 0.35);
+        0 0 4px #ffffff,
+        0 0 12px #ffffff,
+        0 0 25px rgba(0, 229, 255, 1),
+        0 0 55px rgba(0, 229, 255, 0.82),
+        0 0 100px rgba(0, 229, 255, 0.35);
 }
 
-/* linha luminosa */
+/* pequena assinatura luminosa */
 #inicio .hero-line {
-    width: 180px;
+    width: 230px;
     height: 4px;
 
-    margin: 30px 0 25px;
+    margin: 34px 0 26px;
 
     background: #00e5ff;
+    border-radius: 20px;
 
     box-shadow:
         0 0 8px #00e5ff,
         0 0 25px rgba(0, 229, 255, 0.9),
         0 0 55px rgba(0, 229, 255, 0.45);
-
-    border-radius: 10px;
 }
 
 /* programação e robótica */
 #inicio .hero h2 {
     margin: 0;
 
-    font-size: clamp(18px, 2.5vw, 29px);
-    line-height: 1.2;
+    font-size: clamp(22px, 3vw, 35px);
+    line-height: 1.15;
     font-weight: 800;
-    letter-spacing: 6px;
+    letter-spacing: 7px;
     text-transform: uppercase;
 
     color: #ffffff;
@@ -1880,90 +1625,199 @@ footer p {
     color: #00e5ff;
 
     text-shadow:
-        0 0 8px rgba(0, 229, 255, 0.9),
-        0 0 25px rgba(0, 229, 255, 0.55);
+        0 0 8px #00e5ff,
+        0 0 25px rgba(0, 229, 255, 0.65);
 }
 
 /* descrição */
 #inicio .hero-description {
-    max-width: 680px;
-
+    max-width: 760px;
     margin: 25px auto 0;
 
-    color: rgba(220, 240, 248, 0.65);
-    font-size: 13px;
+    color: rgba(220, 240, 248, 0.68);
+    font-size: 14px;
     line-height: 1.8;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.2px;
 }
 
 /* botão */
 #inicio .hero-button {
     margin-top: 30px;
-
     padding: 16px 32px;
 
-    background: #00e5ff;
     color: #001014;
-
+    background: #00e5ff;
     border: 1px solid #00e5ff;
 
     font-size: 11px;
     font-weight: 900;
     letter-spacing: 2px;
     text-transform: uppercase;
+    text-decoration: none;
 
     box-shadow:
-        0 0 12px rgba(0, 229, 255, 0.8),
+        0 0 12px rgba(0, 229, 255, 0.85),
         0 0 35px rgba(0, 229, 255, 0.35);
 
     transition: 0.3s ease;
 }
 
 #inicio .hero-button:hover {
-    transform: translateY(-3px) scale(1.03);
+    transform: translateY(-3px) scale(1.04);
 
     box-shadow:
-        0 0 18px rgba(0, 229, 255, 1),
+        0 0 20px rgba(0, 229, 255, 1),
         0 0 55px rgba(0, 229, 255, 0.55);
 }
 
-/* remove a decoração antiga da direita */
+/* =========================================================
+   DESENHO FUTURISTA DE ÓPTICA
+   ========================================================= */
+
 #inicio .hero-decoration {
-    opacity: 0.08;
-    transform: scale(0.85);
-    right: -100px;
+    position: absolute;
+
+    width: 560px;
+    height: 560px;
+
+    right: -40px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    opacity: 0.22;
     z-index: 1;
+    pointer-events: none;
+
+    filter: drop-shadow(0 0 15px rgba(0, 229, 255, 0.45));
 }
 
-/* núcleo da decoração */
-#inicio .light-core {
+/* anéis */
+#inicio .hero-decoration .orbit {
+    border-color: rgba(0, 229, 255, 0.42);
     box-shadow:
-        0 0 20px rgba(0, 229, 255, 0.7),
-        0 0 60px rgba(0, 229, 255, 0.45),
-        0 0 120px rgba(0, 229, 255, 0.2);
+        0 0 15px rgba(0, 229, 255, 0.06),
+        inset 0 0 15px rgba(0, 229, 255, 0.03);
+}
+
+/* núcleo */
+#inicio .hero-decoration .light-core {
+    width: 95px;
+    height: 95px;
+
+    background: #00e5ff;
+
+    box-shadow:
+        0 0 18px #00e5ff,
+        0 0 55px rgba(0, 229, 255, 0.85),
+        0 0 120px rgba(0, 229, 255, 0.4),
+        0 0 200px rgba(0, 229, 255, 0.18);
+}
+
+/* pontos tecnológicos */
+#inicio .hero-decoration::before,
+#inicio .hero-decoration::after {
+    content: "";
+    position: absolute;
+
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+    background: #00e5ff;
+
+    box-shadow:
+        0 0 10px #00e5ff,
+        0 0 25px rgba(0, 229, 255, 0.8);
+}
+
+#inicio .hero-decoration::before {
+    top: 55px;
+    left: 105px;
+}
+
+#inicio .hero-decoration::after {
+    right: 70px;
+    bottom: 95px;
+}
+
+/* =========================================================
+   DETALHES TECNOLÓGICOS NO CHÃO DA CAPA
+   ========================================================= */
+
+#inicio.hero .hero-content {
+    isolation: isolate;
+}
+
+#inicio.hero .hero-content > * {
+    position: relative;
+    z-index: 3;
+}
+
+/* pequenas marcas HUD */
+#inicio.hero .hero-label::before,
+#inicio.hero .hero-label::after {
+    content: "◆";
+    display: inline-block;
+
+    margin: 0 14px;
+
+    color: rgba(0, 229, 255, 0.65);
+    font-size: 7px;
+
+    vertical-align: middle;
+
+    text-shadow: 0 0 10px #00e5ff;
 }
 
 /* =========================================================
    RESPONSIVO
    ========================================================= */
 
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
 
-    #inicio.hero {
-        padding: 100px 20px 60px;
-    }
-
-    #inicio .hero h1 span {
-        font-size: 48px;
-    }
-
-    #inicio .hero h1 strong {
-        font-size: 70px;
+    #inicio .hero-content::before,
+    #inicio .hero-content::after {
+        opacity: 0.28;
+        width: 95px;
     }
 
     #inicio .hero-decoration {
-        opacity: 0.04;
         right: -180px;
+        opacity: 0.12;
+    }
+}
+
+@media (max-width: 900px) {
+
+    #inicio.hero {
+        min-height: 100vh;
+        height: auto;
+        padding: 120px 22px 70px;
+    }
+
+    #inicio .hero-content::before,
+    #inicio .hero-content::after {
+        display: none;
+    }
+
+    #inicio .hero h1 span {
+        font-size: clamp(42px, 8vw, 64px);
+    }
+
+    #inicio .hero h1 strong {
+        font-size: clamp(62px, 13vw, 110px);
+        letter-spacing: -3px;
+    }
+
+    #inicio .hero h2 {
+        font-size: clamp(18px, 3.5vw, 27px);
+        letter-spacing: 4px;
+    }
+
+    #inicio .hero-decoration {
+        right: -220px;
+        opacity: 0.07;
     }
 }
 
@@ -1971,39 +1825,50 @@ footer p {
 
     #inicio.hero {
         min-height: 100svh;
-        height: auto;
-        padding: 110px 18px 60px;
+        padding: 105px 18px 55px;
+    }
+
+    #inicio.hero::after {
+        width: 500px;
+        height: 500px;
     }
 
     #inicio .hero-label {
-        font-size: 9px;
+        font-size: 8px;
         letter-spacing: 3px;
+    }
+
+    #inicio .hero-label::before,
+    #inicio .hero-label::after {
+        margin: 0 7px;
     }
 
     #inicio .hero-school {
         font-size: 8px;
         letter-spacing: 2px;
-        margin-bottom: 24px;
+        margin-bottom: 25px;
     }
 
     #inicio .hero h1 span {
         font-size: 38px;
         letter-spacing: 2px;
+        margin-bottom: 10px;
     }
 
     #inicio .hero h1 strong {
-        font-size: 51px;
-        letter-spacing: -1px;
+        font-size: 52px;
+        letter-spacing: -2px;
+        line-height: 0.9;
     }
 
     #inicio .hero-line {
-        width: 120px;
+        width: 130px;
         height: 3px;
-        margin: 24px 0 20px;
+        margin: 25px 0 20px;
     }
 
     #inicio .hero h2 {
-        font-size: 17px;
+        font-size: 16px;
         letter-spacing: 3px;
     }
 
@@ -2013,6 +1878,7 @@ footer p {
     }
 
     #inicio .hero-button {
+        margin-top: 25px;
         padding: 14px 24px;
         font-size: 9px;
     }
@@ -2020,36 +1886,4 @@ footer p {
     #inicio .hero-decoration {
         display: none;
     }
-}
-/* =========================================================
-   CAPA — AUMENTO DE 50%
-   ========================================================= */
-
-#inicio .hero h1 span {
-    font-size: clamp(63px, 8.25vw, 108px);
-}
-
-#inicio .hero h1 strong {
-    font-size: clamp(87px, 13.5vw, 188px);
-}
-
-#inicio .hero-line {
-    width: 270px;
-    height: 5px;
-    margin: 38px 0 32px;
-}
-
-#inicio .hero h2 {
-    font-size: clamp(27px, 3.75vw, 44px);
-}
-
-#inicio .hero-description {
-    max-width: 850px;
-    font-size: 15px;
-}
-
-#inicio .hero-button {
-    margin-top: 38px;
-    padding: 19px 40px;
-    font-size: 12px;
 }
