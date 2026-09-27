@@ -2021,3 +2021,35 @@ footer p {
         display: none;
     }
 }
+/* =========================================================
+   CAPA — AUMENTO DE 50%
+   ========================================================= */
+
+#inicio .hero h1 span {
+    font-size: clamp(63px, 8.25vw, 108px);
+}
+
+#inicio .hero h1 strong {
+    font-size: clamp(87px, 13.5vw, 188px);
+}
+
+#inicio .hero-line {
+    width: 270px;
+    height: 5px;
+    margin: 38px 0 32px;
+}
+
+#inicio .hero h2 {
+    font-size: clamp(27px, 3.75vw, 44px);
+}
+
+#inicio .hero-description {
+    max-width: 850px;
+    font-size: 15px;
+}
+
+#inicio .hero-button {
+    margin-top: 38px;
+    padding: 19px 40px;
+    font-size: 12px;
+}
