@@ -171,7 +171,7 @@ body::before {
     display: flex;
     flex-direction: column;
 
-    font-size: clamp(48px, 8vw, 105px);
+    font-size: clamp(100px, 15vw, 220px);
     line-height: 0.9;
 
     letter-spacing: -5px;
