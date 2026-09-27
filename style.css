@@ -1655,3 +1655,121 @@ section h2 span {
     }
 
 }
+/* =========================================================
+   DECORAÇÃO FUTURISTA NAS LATERAIS DOS PROJETOS
+========================================================= */
+
+#projetos {
+    position: relative;
+    overflow: hidden;
+}
+
+/* ELEMENTOS DA ESQUERDA */
+#projetos::before {
+    content: "◉\A\A ◌\A\A RGB\A\A ∿";
+
+    white-space: pre;
+
+    position: absolute;
+    left: 25px;
+    top: 180px;
+
+    font-size: 18px;
+    line-height: 2.2;
+
+    color: rgba(0, 229, 255, 0.45);
+
+    text-shadow:
+        0 0 8px rgba(0, 229, 255, 0.6),
+        0 0 20px rgba(0, 229, 255, 0.2);
+
+    opacity: 0.7;
+
+    animation: simbolosEsquerda 4s ease-in-out infinite;
+}
+
+/* ELEMENTOS DA DIREITA */
+#projetos::after {
+    content: "∿\A\A ◉\A\A 👁\A\A +";
+
+    white-space: pre;
+
+    position: absolute;
+    right: 25px;
+    top: 180px;
+
+    font-size: 18px;
+    line-height: 2.2;
+
+    color: rgba(0, 229, 255, 0.45);
+
+    text-shadow:
+        0 0 8px rgba(0, 229, 255, 0.6),
+        0 0 20px rgba(0, 229, 255, 0.2);
+
+    opacity: 0.7;
+
+    animation: simbolosDireita 4s ease-in-out infinite;
+}
+
+/* LINHAS TECNOLÓGICAS */
+#projetos .projeto-card {
+    position: relative;
+}
+
+#projetos .projeto-card::after {
+    content: "";
+
+    position: absolute;
+
+    top: 50%;
+    left: -20px;
+
+    width: 20px;
+    height: 1px;
+
+    background: rgba(0, 229, 255, 0.35);
+
+    box-shadow: 0 0 8px rgba(0, 229, 255, 0.4);
+
+    opacity: 0.5;
+}
+
+/* MOVIMENTO DISCRETO */
+@keyframes simbolosEsquerda {
+
+    0%, 100% {
+        transform: translateY(0);
+        opacity: 0.45;
+    }
+
+    50% {
+        transform: translateY(-12px);
+        opacity: 0.8;
+    }
+
+}
+
+@keyframes simbolosDireita {
+
+    0%, 100% {
+        transform: translateY(0);
+        opacity: 0.45;
+    }
+
+    50% {
+        transform: translateY(12px);
+        opacity: 0.8;
+    }
+
+}
+
+/* NO CELULAR, ESCONDE OS ELEMENTOS LATERAIS */
+@media (max-width: 900px) {
+
+    #projetos::before,
+    #projetos::after {
+        display: none;
+    }
+
+}
