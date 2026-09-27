@@ -1829,3 +1829,160 @@ section h2 span {
     }
 
 }
+/* =========================================================
+   CAPA — NOVO VISUAL CENTRALIZADO
+========================================================= */
+
+#inicio.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 100px 30px !important;
+
+    position: relative;
+    overflow: hidden;
+}
+
+/* CONTEÚDO CENTRAL */
+#inicio .hero-content {
+    width: 100%;
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+    z-index: 5;
+}
+
+/* ESCOLA */
+#inicio .hero-school {
+    text-align: center;
+    margin-left: 0;
+}
+
+/* TÍTULO PRINCIPAL */
+#inicio .hero-content h1 {
+    margin: 25px 0 0;
+
+    text-align: center;
+
+    font-size: clamp(52px, 8vw, 105px);
+
+    line-height: 0.95;
+
+    letter-spacing: -3px;
+
+    color: #ffffff;
+
+    text-shadow:
+        0 0 10px rgba(255,255,255,0.25),
+        0 0 30px rgba(0,229,255,0.25);
+}
+
+/* 2º ANO B — MENOR */
+#inicio .hero-content h1 span {
+    display: block;
+
+    font-size: clamp(32px, 5vw, 58px);
+
+    line-height: 1;
+
+    margin-bottom: 8px;
+
+    color: #00e5ff;
+
+    letter-spacing: -1px;
+
+    text-shadow:
+        0 0 8px #00e5ff,
+        0 0 25px rgba(0,229,255,0.65),
+        0 0 55px rgba(0,229,255,0.30);
+}
+
+/* PROJETO IFA / EXPOSIÇÃO IFA */
+#inicio .hero-content h1 {
+    color: #ffffff;
+}
+
+/* TEXTO ABAIXO */
+#inicio .hero-content .hero-subtitle,
+#inicio .hero-content .hero-description {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* BOTÃO */
+#inicio .hero-button,
+#inicio .hero-content a {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* SÍMBOLO FUTURISTA */
+#inicio .hero-decoration {
+    position: absolute;
+
+    right: 8%;
+
+    top: 50%;
+
+    transform: translateY(-50%) scale(1.15);
+
+    opacity: 0.9;
+
+    z-index: 1;
+
+    pointer-events: none;
+}
+
+/* BRILHO DO SÍMBOLO */
+#inicio .light-core {
+    box-shadow:
+        0 0 15px #00e5ff,
+        0 0 35px rgba(0,229,255,0.8),
+        0 0 70px rgba(0,229,255,0.45);
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+
+    #inicio .hero-decoration {
+        right: 50%;
+        top: 72%;
+
+        transform:
+            translateX(50%)
+            translateY(-50%)
+            scale(0.75);
+
+        opacity: 0.25;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    #inicio.hero {
+        padding: 100px 20px 80px !important;
+    }
+
+    #inicio .hero-content h1 {
+        font-size: 48px;
+        letter-spacing: -2px;
+    }
+
+    #inicio .hero-content h1 span {
+        font-size: 30px;
+    }
+
+}
