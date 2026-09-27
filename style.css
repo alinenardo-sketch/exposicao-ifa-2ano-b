@@ -1370,3 +1370,288 @@ footer p {
     border: none;
     background: #ffffff;
 }
+/* =========================================================
+   UPGRADE FUTURISTA — EXPOSIÇÃO IFA
+========================================================= */
+
+/* FUNDO TECNOLÓGICO */
+body {
+    background:
+        radial-gradient(circle at 15% 20%, rgba(0, 229, 255, 0.08), transparent 28%),
+        radial-gradient(circle at 85% 70%, rgba(0, 229, 255, 0.06), transparent 30%),
+        #03070b;
+
+    overflow-x: hidden;
+}
+
+/* CAMADA DE GRID TECNOLÓGICO */
+body::before {
+    content: "";
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background-image:
+        linear-gradient(rgba(0, 229, 255, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 229, 255, 0.035) 1px, transparent 1px);
+
+    background-size: 40px 40px;
+
+    mask-image: linear-gradient(
+        to bottom,
+        black,
+        transparent 90%
+    );
+
+    z-index: -1;
+}
+
+/* LINHA DE LUZ NO TOPO DAS SEÇÕES */
+section {
+    position: relative;
+}
+
+section::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+
+    width: 60%;
+    height: 1px;
+
+    transform: translateX(-50%);
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(0, 229, 255, 0.45),
+        transparent
+    );
+
+    box-shadow: 0 0 15px rgba(0, 229, 255, 0.25);
+
+    opacity: 0.5;
+}
+
+/* DIMINUI O ESPAÇO VAZIO DAS SEÇÕES */
+section {
+    padding-top: 90px !important;
+    padding-bottom: 90px !important;
+}
+
+/* TÍTULOS COM MAIS PRESENÇA */
+section h2 {
+    text-shadow:
+        0 0 10px rgba(0, 229, 255, 0.15);
+}
+
+/* DESTAQUE CYAN NOS TÍTULOS */
+section h2 span {
+    text-shadow:
+        0 0 15px rgba(0, 229, 255, 0.35);
+}
+
+/* CARDS DOS PROJETOS */
+.projeto-card {
+    position: relative;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(0, 229, 255, 0.045),
+            rgba(3, 7, 11, 0.95)
+        );
+
+    border: 1px solid rgba(0, 229, 255, 0.22);
+
+    box-shadow:
+        inset 0 0 25px rgba(0, 229, 255, 0.025),
+        0 0 0 rgba(0, 229, 255, 0);
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+/* BRILHO DOS CARDS AO PASSAR O MOUSE */
+.projeto-card:hover {
+    transform: translateY(-8px);
+
+    border-color: rgba(0, 229, 255, 0.75);
+
+    box-shadow:
+        0 0 20px rgba(0, 229, 255, 0.10),
+        0 0 45px rgba(0, 229, 255, 0.05),
+        inset 0 0 25px rgba(0, 229, 255, 0.04);
+}
+
+/* LINHA LUMINOSA NO TOPO DO CARD */
+.projeto-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 15%;
+
+    width: 70%;
+    height: 1px;
+
+    background: #00e5ff;
+
+    box-shadow:
+        0 0 10px #00e5ff,
+        0 0 25px rgba(0, 229, 255, 0.6);
+
+    opacity: 0.6;
+}
+
+/* NÚMEROS DOS PROJETOS */
+.projeto-imagem {
+    background:
+        radial-gradient(
+            circle,
+            rgba(0, 229, 255, 0.13),
+            transparent 65%
+        );
+
+    position: relative;
+}
+
+/* EFEITO DE PULSO NOS NÚMEROS */
+.projeto-imagem::after {
+    content: "";
+
+    position: absolute;
+
+    width: 80px;
+    height: 80px;
+
+    border: 1px solid rgba(0, 229, 255, 0.18);
+
+    border-radius: 50%;
+
+    animation: pulsoTecnologico 3s infinite;
+}
+
+@keyframes pulsoTecnologico {
+
+    0% {
+        transform: scale(0.8);
+        opacity: 0.15;
+    }
+
+    50% {
+        transform: scale(1.15);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: scale(0.8);
+        opacity: 0.15;
+    }
+
+}
+
+/* ÁREA DOS PROJETOS DETALHADOS */
+.projeto-detalhe {
+    position: relative;
+
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(0, 229, 255, 0.045),
+            transparent 30%
+        );
+}
+
+/* CAIXAS DE INFORMAÇÃO */
+.detalhe-box {
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0, 229, 255, 0.05),
+            rgba(3, 7, 11, 0.85)
+        );
+
+    border: 1px solid rgba(0, 229, 255, 0.20);
+
+    box-shadow:
+        inset 0 0 30px rgba(0, 229, 255, 0.025);
+}
+
+/* BOTÕES */
+.material-button,
+.voltar {
+    position: relative;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+.material-button:hover,
+.voltar:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 0 15px rgba(0, 229, 255, 0.35),
+        0 0 35px rgba(0, 229, 255, 0.10);
+}
+
+/* EFEITO DE VARREDURA TECNOLÓGICA */
+.projeto-detalhe::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 1px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #00e5ff,
+        transparent
+    );
+
+    animation: varredura 5s linear infinite;
+
+    opacity: 0.35;
+}
+
+@keyframes varredura {
+
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+
+}
+
+/* CELULAR */
+@media (max-width: 600px) {
+
+    section {
+        padding-top: 65px !important;
+        padding-bottom: 65px !important;
+    }
+
+    body::before {
+        background-size: 28px 28px;
+    }
+
+}
