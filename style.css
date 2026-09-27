@@ -201,7 +201,7 @@ body::before {
 }
 
 .hero h2 {
-    font-size: clamp(50px, 6vw, 50px);
+    font-size: clamp(40px, 6vw, 40px);
     line-height: 1.05;
     letter-spacing: 5px;
 }
