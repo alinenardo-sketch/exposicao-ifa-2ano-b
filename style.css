@@ -1116,3 +1116,137 @@ footer p {
     }
 
 }
+/* =========================================================
+   CORREÇÃO - DETALHES DOS PROJETOS
+========================================================= */
+
+.detalhes-projetos {
+    width: 100%;
+    background: #03070b;
+}
+
+.projeto-detalhe {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 120px 30px;
+
+    border-top: 1px solid rgba(0, 229, 255, 0.12);
+}
+
+.detalhe-numero {
+    color: #00e5ff;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.projeto-detalhe h2 {
+    color: #ffffff;
+    font-size: clamp(42px, 7vw, 75px);
+    line-height: 0.95;
+    letter-spacing: -3px;
+    margin: 0;
+}
+
+.projeto-detalhe h2 span {
+    display: block;
+    color: #00e5ff;
+    text-shadow: 0 0 20px rgba(0, 229, 255, 0.25);
+}
+
+.detalhe-linha {
+    width: 80px;
+    height: 2px;
+    background: #00e5ff;
+    margin: 30px 0;
+    box-shadow: 0 0 12px rgba(0, 229, 255, 0.5);
+}
+
+.projeto-detalhe > p {
+    max-width: 800px;
+    color: #94a3b8;
+    font-size: 16px;
+    line-height: 1.9;
+    margin: 0 0 20px;
+}
+
+.detalhe-box {
+    max-width: 800px;
+    margin-top: 35px;
+    padding: 25px;
+
+    background: linear-gradient(
+        90deg,
+        rgba(0, 229, 255, 0.08),
+        rgba(0, 229, 255, 0.015)
+    );
+
+    border-left: 2px solid #00e5ff;
+}
+
+.detalhe-box strong {
+    display: block;
+    color: #00e5ff;
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.detalhe-box p {
+    color: #94a3b8;
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.voltar {
+    display: inline-block;
+    margin-top: 35px;
+
+    color: #00e5ff;
+    text-decoration: none;
+
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+    transition: 0.3s;
+}
+
+.voltar:hover {
+    color: #ffffff;
+    letter-spacing: 3px;
+}
+
+
+/* =========================================================
+   ESPAÇAMENTO ENTRE OS PROJETOS
+========================================================= */
+
+.projeto-detalhe + .projeto-detalhe {
+    margin-top: 20px;
+}
+
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .projeto-detalhe {
+        padding: 85px 20px;
+    }
+
+    .projeto-detalhe h2 {
+        font-size: 44px;
+        letter-spacing: -2px;
+    }
+
+    .projeto-detalhe > p {
+        font-size: 14px;
+    }
+
+}
