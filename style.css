@@ -3,7 +3,7 @@
 ========================================================= */
 
 * {
-    margin: 1;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
@@ -52,7 +52,7 @@ body::before {
             transparent 1px
         );
 
-    background-size: 70px 70px;
+    background-size: 60px 60px;
 }
 
 
@@ -171,7 +171,7 @@ body::before {
     display: flex;
     flex-direction: column;
 
-    font-size: clamp(100px, 15vw, 220px);
+    font-size: clamp(48px, 8vw, 105px);
     line-height: 0.9;
 
     letter-spacing: -5px;
@@ -186,7 +186,7 @@ body::before {
     font-weight: 800;
     letter-spacing: -1px;
 
-    margin-top: 10px;
+    margin-top: 18px;
 }
 
 .hero-line {
@@ -201,7 +201,7 @@ body::before {
 }
 
 .hero h2 {
-    font-size: clamp(40px, 6vw, 40px);
+    font-size: clamp(22px, 3vw, 38px);
     line-height: 1.05;
     letter-spacing: 5px;
 }
@@ -1371,519 +1371,279 @@ footer p {
     background: #ffffff;
 }
 /* =========================================================
-   CAPA PRINCIPAL — EXPOSIÇÃO IFA
-   VISUAL FUTURISTA / ÓPTICA / TECNOLOGIA
+   INÍCIO — EXPOSIÇÃO IFA | MODELO DA REFERÊNCIA
    ========================================================= */
 
-#inicio.hero {
-    min-height: 100vh;
-    height: 100vh;
-    padding: 90px 30px 70px;
-    position: relative;
-    overflow: hidden;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    text-align: center;
-
+#inicio.hero{
+    min-height:100vh;
+    height:100vh;
+    padding:76px 40px 55px;
+    position:relative;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
     background:
-        radial-gradient(circle at 50% 48%,
-            rgba(0, 229, 255, 0.16) 0%,
-            rgba(0, 229, 255, 0.06) 22%,
-            transparent 52%),
-        radial-gradient(circle at 50% 100%,
-            rgba(0, 229, 255, 0.07),
-            transparent 42%),
-        linear-gradient(180deg, #02070b 0%, #010407 55%, #02070b 100%);
+        radial-gradient(circle at 50% 58%,rgba(0,229,255,.115) 0%,rgba(0,229,255,.045) 19%,transparent 43%),
+        #020509;
 }
 
-/* grade futurista */
-#inicio.hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    opacity: 0.42;
-
+#inicio.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    opacity:.16;
     background-image:
-        linear-gradient(rgba(0, 229, 255, 0.045) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 229, 255, 0.045) 1px, transparent 1px);
-
-    background-size: 55px 55px;
-
-    mask-image:
-        radial-gradient(ellipse at center, black 0%, transparent 78%);
+        linear-gradient(rgba(0,229,255,.035) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(0,229,255,.035) 1px,transparent 1px);
+    background-size:58px 58px;
+    mask-image:radial-gradient(ellipse at center,black 0%,transparent 76%);
 }
 
-/* grande aura óptica central */
-#inicio.hero::after {
-    content: "";
-    position: absolute;
-    width: 760px;
-    height: 760px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-
-    border-radius: 50%;
-
-    background:
-        radial-gradient(circle,
-            rgba(0, 229, 255, 0.13) 0%,
-            rgba(0, 229, 255, 0.045) 28%,
-            transparent 67%);
-
-    filter: blur(8px);
-    pointer-events: none;
-    z-index: 0;
+#inicio.hero::after{
+    content:"";
+    position:absolute;
+    width:680px;
+    height:680px;
+    left:50%;
+    top:57%;
+    transform:translate(-50%,-50%);
+    border-radius:50%;
+    background:radial-gradient(circle,rgba(0,229,255,.105) 0%,rgba(0,229,255,.035) 27%,transparent 68%);
+    filter:blur(9px);
+    pointer-events:none;
 }
 
-/* =========================================================
-   CONTEÚDO
-   ========================================================= */
-
-#inicio .hero-content {
-    position: relative;
-    z-index: 5;
-
-    width: 100%;
-    max-width: 1250px;
-    margin: 0 auto;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+#inicio .hero-content{
+    position:relative;
+    z-index:5;
+    width:100%;
+    max-width:1120px;
+    margin:0 auto;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
 }
 
-/* moldura HUD / circuitos laterais */
 #inicio .hero-content::before,
-#inicio .hero-content::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    width: 145px;
-    height: 230px;
-    transform: translateY(-50%);
+#inicio .hero-content::after{
+    content:"";
+    position:absolute;
+    top:52%;
+    width:185px;
+    height:2px;
+    background:rgba(0,229,255,.26);
+    box-shadow:0 0 10px rgba(0,229,255,.08);
+    pointer-events:none;
+}
+#inicio .hero-content::before{left:-120px}
+#inicio .hero-content::after{right:-120px}
 
-    opacity: 0.55;
-    pointer-events: none;
+#inicio .hero-label{
+    position:relative;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-width:390px;
+    height:50px;
+    margin-bottom:52px;
+    padding:0 30px;
+    color:#00e5ff;
+    border:1px solid rgba(0,229,255,.9);
+    border-radius:30px;
+    background:rgba(0,229,255,.018);
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:5px;
+    text-transform:uppercase;
+    box-shadow:0 0 12px rgba(0,229,255,.10),inset 0 0 15px rgba(0,229,255,.035);
+    text-shadow:0 0 8px rgba(0,229,255,.85);
+}
+#inicio .hero-label::before{
+    content:"●";
+    margin-right:17px;
+    color:#00e5ff;
+    font-size:12px;
+    text-shadow:0 0 8px #00e5ff,0 0 18px rgba(0,229,255,.8);
+}
+#inicio .hero-label::after{display:none}
 
-    background:
-        linear-gradient(#00e5ff, #00e5ff) left top / 42px 1px no-repeat,
-        linear-gradient(#00e5ff, #00e5ff) left top / 1px 42px no-repeat,
-        linear-gradient(#00e5ff, #00e5ff) right bottom / 42px 1px no-repeat,
-        linear-gradient(#00e5ff, #00e5ff) right bottom / 1px 42px no-repeat;
-
-    border-top: 1px solid rgba(0, 229, 255, 0.18);
-    border-bottom: 1px solid rgba(0, 229, 255, 0.18);
-
-    box-shadow:
-        inset 0 0 25px rgba(0, 229, 255, 0.025),
-        0 0 20px rgba(0, 229, 255, 0.04);
+#inicio .hero-school{
+    position:relative;
+    margin-bottom:3px;
+    color:#fff;
+    font-size:19px;
+    font-weight:800;
+    line-height:1.45;
+    letter-spacing:4px;
+    text-align:center;
+    text-transform:uppercase;
+}
+#inicio .hero-school::before{
+    content:"MANDAGUARI • PARANÁ";
+    display:block;
+    margin-top:5px;
+    margin-bottom:2px;
+    color:#647487;
+    font-size:15px;
+    font-weight:500;
+    letter-spacing:4px;
+}
+#inicio .hero-school::after{
+    content:"";
+    position:absolute;
+    width:205px;
+    height:2px;
+    right:-230px;
+    top:-18px;
+    background:rgba(0,229,255,.22);
 }
 
-#inicio .hero-content::before {
-    left: 0;
-
-    background:
-        linear-gradient(#00e5ff, #00e5ff) left top / 42px 1px no-repeat,
-        linear-gradient(#00e5ff, #00e5ff) left top / 1px 42px no-repeat,
-        linear-gradient(#00e5ff, #00e5ff) right bottom / 42px 1px no-repeat,
-        linear-gradient(#00e5ff, #00e5ff) right bottom / 1px 42px no-repeat,
-        linear-gradient(90deg, rgba(0,229,255,.8), rgba(0,229,255,.05)) 0 72px / 90px 1px no-repeat,
-        linear-gradient(90deg, rgba(0,229,255,.5), rgba(0,229,255,.02)) 0 88px / 55px 1px no-repeat;
+#inicio .hero h1{
+    margin:0;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    line-height:.88;
 }
 
-#inicio .hero-content::after {
-    right: 0;
-
-    background:
-        linear-gradient(#00e5ff, #00e5ff) right top / 42px 1px no-repeat,
-        linear-gradient(#00e5ff, #00e5ff) right top / 1px 42px no-repeat,
-        linear-gradient(#00e5ff, #00e5ff) left bottom / 42px 1px no-repeat,
-        linear-gradient(#00e5ff, #00e5ff) left bottom / 1px 42px no-repeat,
-        linear-gradient(90deg, rgba(0,229,255,.05), rgba(0,229,255,.8)) 55px 72px / 90px 1px no-repeat,
-        linear-gradient(90deg, rgba(0,229,255,.02), rgba(0,229,255,.5)) 90px 88px / 55px 1px no-repeat;
+#inicio .hero h1 span{
+    order:1;
+    display:block;
+    margin:5px 0 12px;
+    color:#00e5ff;
+    font-size:clamp(30px,4.4vw,54px);
+    font-weight:500;
+    letter-spacing:9px;
+    line-height:1;
+    text-shadow:0 0 8px rgba(0,229,255,.85),0 0 24px rgba(0,229,255,.42);
 }
 
-/* etiqueta superior */
-#inicio .hero-label {
-    margin-bottom: 14px;
-
-    color: #00e5ff;
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-
-    text-shadow:
-        0 0 8px #00e5ff,
-        0 0 22px rgba(0, 229, 255, 0.45);
+#inicio .hero h1 strong{
+    order:2;
+    display:block;
+    width:min(760px,90vw);
+    margin:0;
+    color:#fff;
+    font-size:clamp(72px,10.8vw,126px);
+    font-weight:950;
+    line-height:.82;
+    letter-spacing:-4px;
+    text-shadow:0 0 5px rgba(255,255,255,.95),0 0 12px rgba(255,255,255,.55),0 0 25px rgba(0,229,255,.65);
+    background:linear-gradient(180deg,#fff 0%,#fff 57%,#00e5ff 100%);
+    -webkit-background-clip:text;
+    background-clip:text;
+    -webkit-text-fill-color:transparent;
 }
 
-/* escola */
-#inicio .hero-school {
-    margin-bottom: 30px;
-
-    color: rgba(220, 245, 255, 0.58);
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    text-align: center;
+#inicio .hero-line{
+    width:135px;
+    height:3px;
+    margin:42px auto 38px;
+    background:#00e5ff;
+    border-radius:20px;
+    box-shadow:0 0 8px #00e5ff,0 0 22px rgba(0,229,255,.85),0 0 45px rgba(0,229,255,.32);
 }
 
-/* =========================================================
-   TÍTULO — 2º ANO B + EXPOSIÇÃO IFA
-   ========================================================= */
-
-#inicio .hero h1 {
-    margin: 0;
-    padding: 0;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    line-height: 0.86;
-    text-align: center;
+#inicio .hero h2{
+    margin:0;
+    color:#fff;
+    font-size:clamp(20px,2.7vw,31px);
+    font-weight:800;
+    line-height:1.1;
+    letter-spacing:7px;
+    text-transform:uppercase;
+    text-shadow:0 0 10px rgba(255,255,255,.20);
+}
+#inicio .hero h2 span{
+    color:#00e5ff;
+    text-shadow:0 0 8px #00e5ff,0 0 22px rgba(0,229,255,.7);
 }
 
-/* 2º ANO B — menor */
-#inicio .hero h1 span {
-    display: block;
-    margin-bottom: 14px;
-
-    font-size: clamp(48px, 6vw, 86px);
-    font-weight: 800;
-    letter-spacing: 4px;
-
-    color: #00e5ff;
-
-    text-shadow:
-        0 0 7px #00e5ff,
-        0 0 20px rgba(0, 229, 255, 0.9),
-        0 0 45px rgba(0, 229, 255, 0.4);
+#inicio .hero-description{
+    max-width:800px;
+    margin:38px auto 0;
+    color:#a4afbd;
+    font-size:17px;
+    line-height:1.65;
 }
 
-/* EXPOSIÇÃO IFA — grande protagonista */
-#inicio .hero h1 strong {
-    display: block;
-
-    font-size: clamp(82px, 13.5vw, 185px);
-    font-weight: 950;
-    letter-spacing: -5px;
-    line-height: 0.86;
-
-    color: #ffffff;
-
-    text-shadow:
-        0 0 4px #ffffff,
-        0 0 12px #ffffff,
-        0 0 25px rgba(0, 229, 255, 1),
-        0 0 55px rgba(0, 229, 255, 0.82),
-        0 0 100px rgba(0, 229, 255, 0.35);
+#inicio .hero-button{
+    margin-top:34px;
+    min-width:390px;
+    padding:18px 36px;
+    color:#00e5ff;
+    background:transparent;
+    border:2px solid rgba(0,229,255,.8);
+    text-decoration:none;
+    font-size:14px;
+    font-weight:800;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    box-shadow:0 0 12px rgba(0,229,255,.10),inset 0 0 18px rgba(0,229,255,.025);
+    transition:.3s ease;
+}
+#inicio .hero-button:hover{
+    color:#001014;
+    background:#00e5ff;
+    box-shadow:0 0 20px rgba(0,229,255,.85),0 0 45px rgba(0,229,255,.35);
 }
 
-/* pequena assinatura luminosa */
-#inicio .hero-line {
-    width: 230px;
-    height: 4px;
-
-    margin: 34px 0 26px;
-
-    background: #00e5ff;
-    border-radius: 20px;
-
-    box-shadow:
-        0 0 8px #00e5ff,
-        0 0 25px rgba(0, 229, 255, 0.9),
-        0 0 55px rgba(0, 229, 255, 0.45);
+#inicio .hero-decoration{
+    position:absolute;
+    width:480px;
+    height:480px;
+    right:-115px;
+    top:50%;
+    transform:translateY(-50%);
+    opacity:.075;
+    z-index:1;
+    pointer-events:none;
+    filter:drop-shadow(0 0 18px rgba(0,229,255,.45));
+}
+#inicio .hero-decoration .orbit{border-color:rgba(0,229,255,.65)}
+#inicio .hero-decoration .light-core{
+    width:75px;
+    height:75px;
+    background:#00e5ff;
+    box-shadow:0 0 20px #00e5ff,0 0 60px rgba(0,229,255,.8),0 0 120px rgba(0,229,255,.3);
 }
 
-/* programação e robótica */
-#inicio .hero h2 {
-    margin: 0;
-
-    font-size: clamp(22px, 3vw, 35px);
-    line-height: 1.15;
-    font-weight: 800;
-    letter-spacing: 7px;
-    text-transform: uppercase;
-
-    color: #ffffff;
-
-    text-shadow:
-        0 0 10px rgba(255, 255, 255, 0.35),
-        0 0 25px rgba(0, 229, 255, 0.25);
+@media (min-width:901px){
+    #inicio.hero{padding-top:92px}
+    #inicio .hero-content{transform:translateY(8px)}
 }
 
-#inicio .hero h2 span {
-    color: #00e5ff;
-
-    text-shadow:
-        0 0 8px #00e5ff,
-        0 0 25px rgba(0, 229, 255, 0.65);
+@media (max-width:900px){
+    #inicio.hero{min-height:100svh;height:auto;padding:115px 20px 55px}
+    #inicio .hero-content::before,#inicio .hero-content::after,#inicio .hero-school::after{display:none}
+    #inicio .hero-label{min-width:0;width:min(390px,90vw);height:46px;margin-bottom:38px;padding:0 18px;font-size:10px;letter-spacing:3px}
+    #inicio .hero-school{font-size:15px;letter-spacing:3px}
+    #inicio .hero-school::before{font-size:12px;letter-spacing:3px}
+    #inicio .hero h1 span{font-size:39px;letter-spacing:6px}
+    #inicio .hero h1 strong{width:min(700px,95vw);font-size:clamp(62px,12vw,105px)}
+    #inicio .hero-line{margin:32px auto 28px}
+    #inicio .hero h2{font-size:22px;letter-spacing:4px}
+    #inicio .hero-description{max-width:760px;font-size:15px}
+    #inicio .hero-button{min-width:320px}
+    #inicio .hero-decoration{right:-250px;opacity:.035}
 }
 
-/* descrição */
-#inicio .hero-description {
-    max-width: 760px;
-    margin: 25px auto 0;
-
-    color: rgba(220, 240, 248, 0.68);
-    font-size: 14px;
-    line-height: 1.8;
-    letter-spacing: 0.2px;
-}
-
-/* botão */
-#inicio .hero-button {
-    margin-top: 30px;
-    padding: 16px 32px;
-
-    color: #001014;
-    background: #00e5ff;
-    border: 1px solid #00e5ff;
-
-    font-size: 11px;
-    font-weight: 900;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    text-decoration: none;
-
-    box-shadow:
-        0 0 12px rgba(0, 229, 255, 0.85),
-        0 0 35px rgba(0, 229, 255, 0.35);
-
-    transition: 0.3s ease;
-}
-
-#inicio .hero-button:hover {
-    transform: translateY(-3px) scale(1.04);
-
-    box-shadow:
-        0 0 20px rgba(0, 229, 255, 1),
-        0 0 55px rgba(0, 229, 255, 0.55);
-}
-
-/* =========================================================
-   DESENHO FUTURISTA DE ÓPTICA
-   ========================================================= */
-
-#inicio .hero-decoration {
-    position: absolute;
-
-    width: 560px;
-    height: 560px;
-
-    right: -40px;
-    top: 50%;
-
-    transform: translateY(-50%);
-
-    opacity: 0.22;
-    z-index: 1;
-    pointer-events: none;
-
-    filter: drop-shadow(0 0 15px rgba(0, 229, 255, 0.45));
-}
-
-/* anéis */
-#inicio .hero-decoration .orbit {
-    border-color: rgba(0, 229, 255, 0.42);
-    box-shadow:
-        0 0 15px rgba(0, 229, 255, 0.06),
-        inset 0 0 15px rgba(0, 229, 255, 0.03);
-}
-
-/* núcleo */
-#inicio .hero-decoration .light-core {
-    width: 95px;
-    height: 95px;
-
-    background: #00e5ff;
-
-    box-shadow:
-        0 0 18px #00e5ff,
-        0 0 55px rgba(0, 229, 255, 0.85),
-        0 0 120px rgba(0, 229, 255, 0.4),
-        0 0 200px rgba(0, 229, 255, 0.18);
-}
-
-/* pontos tecnológicos */
-#inicio .hero-decoration::before,
-#inicio .hero-decoration::after {
-    content: "";
-    position: absolute;
-
-    width: 10px;
-    height: 10px;
-
-    border-radius: 50%;
-    background: #00e5ff;
-
-    box-shadow:
-        0 0 10px #00e5ff,
-        0 0 25px rgba(0, 229, 255, 0.8);
-}
-
-#inicio .hero-decoration::before {
-    top: 55px;
-    left: 105px;
-}
-
-#inicio .hero-decoration::after {
-    right: 70px;
-    bottom: 95px;
-}
-
-/* =========================================================
-   DETALHES TECNOLÓGICOS NO CHÃO DA CAPA
-   ========================================================= */
-
-#inicio.hero .hero-content {
-    isolation: isolate;
-}
-
-#inicio.hero .hero-content > * {
-    position: relative;
-    z-index: 3;
-}
-
-/* pequenas marcas HUD */
-#inicio.hero .hero-label::before,
-#inicio.hero .hero-label::after {
-    content: "◆";
-    display: inline-block;
-
-    margin: 0 14px;
-
-    color: rgba(0, 229, 255, 0.65);
-    font-size: 7px;
-
-    vertical-align: middle;
-
-    text-shadow: 0 0 10px #00e5ff;
-}
-
-/* =========================================================
-   RESPONSIVO
-   ========================================================= */
-
-@media (max-width: 1200px) {
-
-    #inicio .hero-content::before,
-    #inicio .hero-content::after {
-        opacity: 0.28;
-        width: 95px;
-    }
-
-    #inicio .hero-decoration {
-        right: -180px;
-        opacity: 0.12;
-    }
-}
-
-@media (max-width: 900px) {
-
-    #inicio.hero {
-        min-height: 100vh;
-        height: auto;
-        padding: 120px 22px 70px;
-    }
-
-    #inicio .hero-content::before,
-    #inicio .hero-content::after {
-        display: none;
-    }
-
-    #inicio .hero h1 span {
-        font-size: clamp(42px, 8vw, 64px);
-    }
-
-    #inicio .hero h1 strong {
-        font-size: clamp(62px, 13vw, 110px);
-        letter-spacing: -3px;
-    }
-
-    #inicio .hero h2 {
-        font-size: clamp(18px, 3.5vw, 27px);
-        letter-spacing: 4px;
-    }
-
-    #inicio .hero-decoration {
-        right: -220px;
-        opacity: 0.07;
-    }
-}
-
-@media (max-width: 600px) {
-
-    #inicio.hero {
-        min-height: 100svh;
-        padding: 105px 18px 55px;
-    }
-
-    #inicio.hero::after {
-        width: 500px;
-        height: 500px;
-    }
-
-    #inicio .hero-label {
-        font-size: 8px;
-        letter-spacing: 3px;
-    }
-
-    #inicio .hero-label::before,
-    #inicio .hero-label::after {
-        margin: 0 7px;
-    }
-
-    #inicio .hero-school {
-        font-size: 8px;
-        letter-spacing: 2px;
-        margin-bottom: 25px;
-    }
-
-    #inicio .hero h1 span {
-        font-size: 38px;
-        letter-spacing: 2px;
-        margin-bottom: 10px;
-    }
-
-    #inicio .hero h1 strong {
-        font-size: 52px;
-        letter-spacing: -2px;
-        line-height: 0.9;
-    }
-
-    #inicio .hero-line {
-        width: 130px;
-        height: 3px;
-        margin: 25px 0 20px;
-    }
-
-    #inicio .hero h2 {
-        font-size: 16px;
-        letter-spacing: 3px;
-    }
-
-    #inicio .hero-description {
-        font-size: 11px;
-        line-height: 1.7;
-    }
-
-    #inicio .hero-button {
-        margin-top: 25px;
-        padding: 14px 24px;
-        font-size: 9px;
-    }
-
-    #inicio .hero-decoration {
-        display: none;
-    }
+@media (max-width:600px){
+    #inicio.hero{min-height:100svh;padding:100px 16px 45px}
+    #inicio .hero-label{height:42px;margin-bottom:32px;font-size:8px;letter-spacing:2.5px}
+    #inicio .hero-label::before{margin-right:10px;font-size:8px}
+    #inicio .hero-school{font-size:12px;letter-spacing:2px}
+    #inicio .hero-school::before{font-size:9px;letter-spacing:2px}
+    #inicio .hero h1 span{font-size:31px;letter-spacing:4px}
+    #inicio .hero h1 strong{width:94vw;font-size:58px;letter-spacing:-2px;line-height:.86}
+    #inicio .hero-line{width:115px;height:3px;margin:28px auto 25px}
+    #inicio .hero h2{font-size:16px;letter-spacing:2.5px}
+    #inicio .hero-description{margin-top:27px;font-size:11px;line-height:1.7}
+    #inicio .hero-button{min-width:250px;margin-top:25px;padding:14px 20px;font-size:9px;letter-spacing:2px}
+    #inicio .hero-decoration{display:none}
 }
