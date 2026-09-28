@@ -1613,37 +1613,248 @@ footer p {
     box-shadow:0 0 20px #00e5ff,0 0 60px rgba(0,229,255,.8),0 0 120px rgba(0,229,255,.3);
 }
 
-@media (min-width:901px){
-    #inicio.hero{padding-top:92px}
-    #inicio .hero-content{transform:translateY(8px)}
+/* =========================================================
+   CAPA — AJUSTE FINAL
+========================================================= */
+
+@media (min-width: 901px) {
+
+    #inicio.hero {
+        min-height: 100vh;
+        padding: 120px 8% 80px;
+        display: flex;
+        align-items: center;
+    }
+
+    #inicio .hero-content {
+        max-width: 900px;
+    }
+
+    #inicio .hero-label {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 260px;
+        height: 46px;
+        padding: 0 24px;
+
+        border: 1px solid rgba(0, 229, 255, 0.55);
+        border-radius: 30px;
+
+        color: #00e5ff;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 3px;
+
+        background: rgba(0, 229, 255, 0.035);
+        box-shadow: 0 0 25px rgba(0, 229, 255, 0.06);
+
+        margin-bottom: 30px;
+    }
+
+    #inicio .hero-school {
+        text-align: center;
+        font-size: 14px;
+        letter-spacing: 3px;
+        margin-bottom: 28px;
+    }
+
+    #inicio .hero h1 {
+        align-items: center;
+        text-align: center;
+    }
+
+    #inicio .hero h1 span {
+        color: #00e5ff;
+        font-size: 38px;
+        letter-spacing: 5px;
+    }
+
+    #inicio .hero h1 strong {
+        display: block;
+        width: auto;
+
+        color: #ffffff;
+        font-size: clamp(72px, 10vw, 120px);
+        line-height: .86;
+        letter-spacing: -4px;
+        margin-top: 8px;
+
+        text-shadow:
+            0 0 20px rgba(255,255,255,.08);
+    }
+
+    #inicio .hero-line {
+        width: 150px;
+        height: 2px;
+        margin: 32px auto 25px;
+    }
+
+    #inicio .hero h2 {
+        text-align: center;
+        font-size: 22px;
+        letter-spacing: 4px;
+    }
+
+    #inicio .hero-description {
+        max-width: 760px;
+        margin: 25px auto 0;
+
+        text-align: center;
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    #inicio .hero-button {
+        display: table;
+        margin: 28px auto 0;
+
+        padding: 14px 25px;
+
+        color: #00e5ff;
+        background: transparent;
+
+        border: 1px solid rgba(0, 229, 255, 0.65);
+        border-radius: 3px;
+
+        box-shadow: 0 0 20px rgba(0, 229, 255, 0.05);
+    }
+
+    #inicio .hero-decoration {
+        right: -180px;
+        opacity: .20;
+    }
 }
 
-@media (max-width:900px){
-    #inicio.hero{min-height:100svh;height:auto;padding:115px 20px 55px}
-    #inicio .hero-content::before,#inicio .hero-content::after,#inicio .hero-school::after{display:none}
-    #inicio .hero-label{min-width:0;width:min(390px,90vw);height:46px;margin-bottom:38px;padding:0 18px;font-size:10px;letter-spacing:3px}
-    #inicio .hero-school{font-size:15px;letter-spacing:3px}
-    #inicio .hero-school::before{font-size:12px;letter-spacing:3px}
-    #inicio .hero h1 span{font-size:39px;letter-spacing:6px}
-    #inicio .hero h1 strong{width:min(700px,95vw);font-size:clamp(62px,12vw,105px)}
-    #inicio .hero-line{margin:32px auto 28px}
-    #inicio .hero h2{font-size:22px;letter-spacing:4px}
-    #inicio .hero-description{max-width:760px;font-size:15px}
-    #inicio .hero-button{min-width:320px}
-    #inicio .hero-decoration{right:-250px;opacity:.035}
-}
 
-@media (max-width:600px){
-    #inicio.hero{min-height:100svh;padding:100px 16px 45px}
-    #inicio .hero-label{height:42px;margin-bottom:32px;font-size:8px;letter-spacing:2.5px}
-    #inicio .hero-label::before{margin-right:10px;font-size:8px}
-    #inicio .hero-school{font-size:12px;letter-spacing:2px}
-    #inicio .hero-school::before{font-size:9px;letter-spacing:2px}
-    #inicio .hero h1 span{font-size:31px;letter-spacing:4px}
-    #inicio .hero h1 strong{width:94vw;font-size:58px;letter-spacing:-2px;line-height:.86}
-    #inicio .hero-line{width:115px;height:3px;margin:28px auto 25px}
-    #inicio .hero h2{font-size:16px;letter-spacing:2.5px}
-    #inicio .hero-description{margin-top:27px;font-size:11px;line-height:1.7}
-    #inicio .hero-button{min-width:250px;margin-top:25px;padding:14px 20px;font-size:9px;letter-spacing:2px}
-    #inicio .hero-decoration{display:none}
+@media (max-width: 900px) {
+
+    #inicio.hero {
+        min-height: 100vh;
+        height: auto;
+
+        padding: 115px 18px 55px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #inicio .hero-content {
+        width: 100%;
+        max-width: 600px;
+
+        text-align: center;
+    }
+
+    #inicio .hero-label {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        width: auto;
+        min-width: 245px;
+        height: 42px;
+
+        padding: 0 18px;
+        margin-bottom: 28px;
+
+        border: 1px solid rgba(0, 229, 255, .60);
+        border-radius: 30px;
+
+        color: #00e5ff;
+        background: rgba(0, 229, 255, .035);
+
+        font-size: 8px;
+        font-weight: 700;
+        letter-spacing: 2.5px;
+    }
+
+    #inicio .hero-school {
+        font-size: 12px;
+        letter-spacing: 2px;
+        line-height: 1.7;
+
+        margin-bottom: 24px;
+    }
+
+    #inicio .hero h1 {
+        align-items: center;
+        text-align: center;
+    }
+
+    #inicio .hero h1 span {
+        font-size: 30px;
+        letter-spacing: 4px;
+        line-height: 1;
+    }
+
+    #inicio .hero h1 strong {
+        width: 100%;
+
+        margin-top: 8px;
+
+        font-size: clamp(55px, 15vw, 78px);
+        line-height: .88;
+        letter-spacing: -3px;
+
+        color: #ffffff;
+
+        text-shadow:
+            0 0 18px rgba(255,255,255,.08);
+    }
+
+    #inicio .hero-line {
+        width: 115px;
+        height: 2px;
+
+        margin: 28px auto 25px;
+
+        box-shadow:
+            0 0 15px rgba(0,229,255,.75);
+    }
+
+    #inicio .hero h2 {
+        font-size: 16px;
+        letter-spacing: 2.5px;
+        line-height: 1.25;
+        text-align: center;
+    }
+
+    #inicio .hero-description {
+        max-width: 420px;
+
+        margin: 25px auto 0;
+
+        font-size: 11px;
+        line-height: 1.7;
+
+        text-align: center;
+    }
+
+    #inicio .hero-button {
+        display: inline-block;
+
+        min-width: 245px;
+
+        margin: 25px auto 0;
+
+        padding: 14px 20px;
+
+        font-size: 9px;
+        letter-spacing: 2px;
+
+        color: #00e5ff;
+        background: transparent;
+
+        border: 1px solid rgba(0,229,255,.65);
+        border-radius: 3px;
+
+        box-shadow:
+            0 0 20px rgba(0,229,255,.05);
+    }
+
+    #inicio .hero-decoration {
+        display: none;
+    }
 }
